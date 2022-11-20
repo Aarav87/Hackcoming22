@@ -4,14 +4,19 @@ from diseases import label_prognosis_map
 import pickle
 
 app = Flask(__name__)
-
 CORS(app)
+
+# Load Random Forest Classifier model
+model = pickle.load(open('model.pkl', 'rb'))
 
 
 # Prediction API Route
 @app.route("/prediction", methods=["POST"], strict_slashes=False)
 def prediction():
-    return
+    symptoms = request.get_json()['symptoms']
+    diagnosis = model.predict([symptoms])
+
+    return label_prognosis_map[diagnosis[0]]
 
 
 if __name__ == "__main__":
