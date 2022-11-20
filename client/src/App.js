@@ -1,7 +1,7 @@
 import './App.css';
 import logo from './logo.png';
 import SearchBar from './components/SearchBar'
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import axios from 'axios';
 
 function App() {
@@ -26,7 +26,23 @@ function App() {
                         setSymptomsChosen={setSymptomsChosen}/>
                     <button onClick={onPredictClick} className="diagnose-button">Diagnose</button>
                 </span>
-                {diagnosis ? <h1>{diagnosis}</h1> : null}
+                <div className="diagnosis">
+                    {diagnosis ?  (
+                            <>
+                                <h2>Diagnosis: {diagnosis}</h2>
+                                <h3>What Should You Do?</h3>
+                                <ul className="list">
+                                    <li>Rest</li>
+                                    <li>Stay hydrated</li>
+                                    <li>Sip warm liquids</li>
+                                    <li>Try saline nasal drops or sprays</li>
+                                    <li>Relieve Pain/Fever (Tylenol, Advil)</li>
+                                    <li>Visit hospital/doctor if condition worsens</li>
+                                </ul>
+                            </>
+                        ) : null
+                    }
+                </div>
             </header>
         </div>
   );

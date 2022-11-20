@@ -31,3 +31,12 @@
   border-radius: 100px;
   float: right;
 }
+
+.diagnosis {
+  padding-top: 20px;
+}
+
+.list {
+  text-align: left;
+  list-style-type: square;
+}
