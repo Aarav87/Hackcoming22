@@ -4,7 +4,7 @@
 [Devpost](https://devpost.com/software/dr-daignoser) \
 [Video Demo](https://www.youtube.com/watch?v=QHT-1-E4B8A&t=1s&ab_channel=AaravChhabra)
 
-![Preview Image](https://github.com/Aarav87/Hackcoming22/blob/main/images/demo3.png?raw=true)
+![Preview Image](https://github.com/Aarav87/Hackcoming22/blob/master/images/demo3.png?raw=true)
 
 ## Description
 
